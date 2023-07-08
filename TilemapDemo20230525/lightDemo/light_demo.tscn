@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bv3yyimnibbgu"]
+
+[ext_resource type="Texture2D" uid="uid://wpiti0bf3dgg" path="res://lightDemo/background.png" id="1_1xp1t"]
+[ext_resource type="PackedScene" uid="uid://xknuorrh17iv" path="res://lightDemo/cube.tscn" id="1_carsk"]
+[ext_resource type="Texture2D" uid="uid://5kyv812kit1x" path="res://lightDemo/20230527_light.png" id="2_sbqqk"]
+[ext_resource type="Script" path="res://lightDemo/Lamp.gd" id="3_br1gi"]
+[ext_resource type="Texture2D" uid="uid://be23r041idmeg" path="res://lightDemo/20230527_light2.png" id="3_d5l0t"]
+
+[node name="LightDemo" type="Node2D"]
+
+[node name="Ground" type="Sprite2D" parent="."]
+light_mask = 524288
+position = Vector2(0, -0.999989)
+scale = Vector2(1.23926, 0.78125)
+texture = ExtResource("1_1xp1t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Entities" type="Node2D" parent="."]
+
+[node name="Cube3" parent="Entities" instance=ExtResource("1_carsk")]
+position = Vector2(73, -66)
+
+[node name="Cube4" parent="Entities" instance=ExtResource("1_carsk")]
+position = Vector2(-42, -46)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cube2" parent="Entities" instance=ExtResource("1_carsk")]
+position = Vector2(83, 33)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cube" parent="Entities" instance=ExtResource("1_carsk")]
+position = Vector2(-74, 49)
+
+[node name="Lamp" type="Sprite2D" parent="Entities"]
+position = Vector2(5, 8)
+texture = ExtResource("2_sbqqk")
+script = ExtResource("3_br1gi")
+
+[node name="SpritePointLight2D" type="PointLight2D" parent="Entities/Lamp"]
+texture = ExtResource("3_d5l0t")
+
+[node name="ShadowPointLight2D2" type="PointLight2D" parent="Entities/Lamp"]
+range_item_cull_mask = 524288
+shadow_enabled = true
+texture = ExtResource("3_d5l0t")

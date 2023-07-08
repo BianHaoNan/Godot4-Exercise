@@ -1,0 +1,29 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://pymc3eplx0vy"]
+
+[ext_resource type="Texture2D" uid="uid://mproskeq7pwu" path="res://Resources/Sprites/UI/UI_Flat_Button_Large_Lock_01a3.png" id="1_byqhu"]
+[ext_resource type="Texture2D" uid="uid://bx2p52xsxi0d3" path="res://Resources/Sprites/UI/UI_Flat_Button_Large_Lock_01a1.png" id="2_h24hl"]
+[ext_resource type="Texture2D" uid="uid://ddbbllq3pn2b3" path="res://Resources/Sprites/UI/UI_Flat_Button_Large_Lock_01a2.png" id="3_o6nxr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f2nj1"]
+texture = ExtResource("1_byqhu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ccdeu"]
+texture = ExtResource("2_h24hl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dlufx"]
+texture = ExtResource("3_o6nxr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t4sbj"]
+texture = ExtResource("1_byqhu")
+
+[resource]
+Button/colors/font_disabled_color = Color(0.301961, 0.301961, 0.301961, 0.501961)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/disabled = SubResource("StyleBoxTexture_f2nj1")
+Button/styles/hover = SubResource("StyleBoxTexture_ccdeu")
+Button/styles/normal = SubResource("StyleBoxTexture_dlufx")
+Button/styles/pressed = SubResource("StyleBoxTexture_t4sbj")

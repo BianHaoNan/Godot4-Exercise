@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://chxyeypxsod16"]
+
+[ext_resource type="Texture2D" uid="uid://c6654ppdfa5v8" path="res://20230527_plane.png" id="1_xvhda"]
+[ext_resource type="Texture2D" uid="uid://yn5g3axpph8" path="res://20230527_plane_2.png" id="2_ck2wi"]
+[ext_resource type="PackedScene" uid="uid://d4ey0i2onvbp2" path="res://playerMove.tscn" id="3_40x21"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2eyw"]
+texture = ExtResource("1_xvhda")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vmbjs"]
+texture = ExtResource("2_ck2wi")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/y_sort_origin = 16
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/1 = 1
+0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/1/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_16i0g"]
+tile_layout = 4
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_s2eyw")
+sources/4 = SubResource("TileSetAtlasSource_vmbjs")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_16i0g")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(786450, 4, 0, 720912, 4, 0, 720916, 4, 0, 589842, 4, 0, 524308, 4, 0, 524304, 4, 0, 655374, 4, 0, 655382, 4, 0, 720920, 4, 0, 786454, 4, 0, 851988, 4, 0, 917522, 4, 0, 851984, 4, 0, 786446, 4, 0, 720908, 4, 0, 393234, 4, 0, 524312, 4, 0, 393238, 4, 0, 393230, 4, 0, 524300, 4, 0, 655370, 4, 0, 655386, 4, 0, 262164, 4, 0, 262160, 4, 0, 131090, 4, 0, 524316, 4, 0, 393242, 4, 0, 393246, 4, 0, 262172, 4, 0, 262168, 4, 0, 655390, 4, 0, 524320, 4, 0, 655394, 4, 0, 720928, 4, 0, 720924, 4, 0, 786462, 4, 0, 786458, 4, 0, 851992, 4, 0, 851996, 4, 0, 917530, 4, 0, 917526, 4, 0, 983064, 4, 0, 983060, 4, 0, 1048598, 4, 0)
+
+[node name="player" parent="." instance=ExtResource("3_40x21")]

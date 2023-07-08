@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ixi3u8oq23mf"]
+
+[ext_resource type="Texture2D" uid="uid://bsmmpa3orsfqj" path="res://Resources/Beam.jpg" id="1_j5kio"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Beam" type="Sprite2D" parent="."]
+position = Vector2(578, 567)
+scale = Vector2(1.03667, 1.03667)
+texture = ExtResource("1_j5kio")

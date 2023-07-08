@@ -1,0 +1,11 @@
+Timer
+Button
+Node2D
+AudioStreamPlayer
+RichTextLabel
+TextEdit
+AnimationPlayer
+AnimatedSprite2D
+Sprite2D
+PointLight2D
+LightOccluder2D

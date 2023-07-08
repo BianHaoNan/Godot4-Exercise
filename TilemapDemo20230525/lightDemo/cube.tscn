@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://xknuorrh17iv"]
+
+[ext_resource type="Texture2D" uid="uid://bo6qr7ucaav77" path="res://lightDemo/20230527_plane_2.png" id="1_x655m"]
+[ext_resource type="Texture2D" uid="uid://cmqq8jg6xl04b" path="res://lightDemo/cube_n.png" id="2_1o7aq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_l5uhk"]
+diffuse_texture = ExtResource("1_x655m")
+normal_texture = ExtResource("2_1o7aq")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w4600"]
+polygon = PackedVector2Array(-32, 17, 0, 33, 32, 17, 0, -1)
+
+[node name="Cube" type="Sprite2D"]
+texture = SubResource("CanvasTexture_l5uhk")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_w4600")

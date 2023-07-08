@@ -1,0 +1,8 @@
+res://Scenes/Main.tscn
+res://Scripts/MainMenu.gd
+res://Scenes/Round_01.tscn
+res://Scenes/GeormetryIncubation.tscn
+res://Scripts/GeormetrySportSystem.gd
+res://Scripts/Round_01.gd
+res://Scenes/Player.tscn
+res://Scripts/PlayerMove.gd

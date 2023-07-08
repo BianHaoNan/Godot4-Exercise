@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckyn7egx85q0a"
+path="res://.godot/imported/Dark Fantasy Studio- Fallen leaves (seamless).mp3-974851b6b60765728e1c6fe5b60286cd.mp3str"
+
+[deps]
+
+source_file="res://Resources/Mutilmedias/Audios/BGM/Dark Fantasy Studio- Fallen leaves (seamless).mp3"
+dest_files=["res://.godot/imported/Dark Fantasy Studio- Fallen leaves (seamless).mp3-974851b6b60765728e1c6fe5b60286cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

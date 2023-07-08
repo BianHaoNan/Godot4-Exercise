@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdeiqkpwtjq40"]
+
+[ext_resource type="Script" path="res://Scripts/Round_01.gd" id="1_h7tyu"]
+
+[node name="Round01" type="Node2D"]
+script = ExtResource("1_h7tyu")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(960, 540)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

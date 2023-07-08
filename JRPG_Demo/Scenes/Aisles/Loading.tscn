@@ -1,0 +1,101 @@
+[gd_scene load_steps=12 format=3 uid="uid://bqlf0ut1mkhgn"]
+
+[ext_resource type="Texture2D" uid="uid://b2h1e4eigtblq" path="res://Resources/Sprites/Background/Sandness.png" id="1_r18ml"]
+[ext_resource type="Texture2D" uid="uid://cff41572ef88q" path="res://Resources/Sprites/UI/UI_Flat_Scrollbar_02.png" id="2_3vahy"]
+[ext_resource type="Texture2D" uid="uid://bqa566276t61o" path="res://Resources/Sprites/UI/UI_Flat_Filler_04.png" id="3_m6hik"]
+[ext_resource type="Texture2D" uid="uid://cmlbx4colspn8" path="res://Resources/Animations/Characters/20230521_2_anim.png" id="4_oamc2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u5ad7"]
+texture = ExtResource("2_3vahy")
+texture_margin_left = 4.0
+texture_margin_top = 6.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 10, 32, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n14m6"]
+texture = ExtResource("3_m6hik")
+texture_margin_left = 3.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(0, 15, 5, 2)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7y11"]
+atlas = ExtResource("4_oamc2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt2qs"]
+atlas = ExtResource("4_oamc2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31sdl"]
+atlas = ExtResource("4_oamc2")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxd6h"]
+atlas = ExtResource("4_oamc2")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kip7i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7y11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt2qs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31sdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxd6h")
+}],
+"loop": true,
+"name": &"loading",
+"speed": 5.0
+}]
+
+[node name="Loading" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sandness" type="Sprite2D" parent="."]
+texture = ExtResource("1_r18ml")
+centered = false
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -968.0
+offset_top = 476.0
+offset_bottom = 511.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/background = SubResource("StyleBoxTexture_u5ad7")
+theme_override_styles/fill = SubResource("StyleBoxTexture_n14m6")
+step = 1.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 936)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_kip7i")
+animation = &"loading"
+autoplay = "loading"
+frame_progress = 0.880865

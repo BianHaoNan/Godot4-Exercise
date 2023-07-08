@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://kf8wmncws1g3"]
+
+[ext_resource type="Texture2D" uid="uid://bkuqbigtb1b1y" path="res://Resources/Sprites/UI/UI_Flat_Checkmark_Large.png" id="1_qprow"]
+[ext_resource type="Texture2D" uid="uid://coq43hqsrkx5t" path="res://Resources/Sprites/UI/UI_Flat_Frame_02_Inward.png" id="2_r1a3y"]
+
+[resource]
+CheckBox/colors/font_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_disabled_color = Color(0, 0, 0, 0.501961)
+CheckBox/colors/font_focus_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_hover_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_outline_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_pressed_color = Color(0, 0, 0, 1)
+CheckBox/icons/radio_checked = ExtResource("1_qprow")
+CheckBox/icons/radio_unchecked = ExtResource("2_r1a3y")

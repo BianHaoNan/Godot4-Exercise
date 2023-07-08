@@ -1,0 +1,15 @@
+Marker2D
+CollisionShape2D
+Sprite2D
+CharacterBody2D
+Timer
+Area2D
+CollisionPolygon2D
+Button
+Panel
+MultiMeshInstance2D
+Line2D
+MeshInstance2D
+CanvasGroup
+CanvasLayer
+Node2D

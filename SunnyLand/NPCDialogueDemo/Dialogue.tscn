@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://jvigkl3is05d"]
+
+[ext_resource type="Texture2D" uid="uid://f1ongsd7fjng" path="res://icon.svg" id="1_r8dyu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 42.0
+offset_top = 39.0
+offset_right = 439.0
+offset_bottom = 163.0
+texture = ExtResource("1_r8dyu")
+region_rect = Rect2(1, 0, 126, 128)
+patch_margin_left = 36
+patch_margin_top = 65
+patch_margin_right = 33
+patch_margin_bottom = 34

@@ -1,0 +1,7 @@
+res://World.tscn
+res://HP.gd
+res://Global/Utils.gd
+res://ShaderDemo/ShaderDemo.tscn
+res://NPCDialogueDemo/Dialogue.tscn
+res://Collectables/Cherry.tscn
+res://Main.gd

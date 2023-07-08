@@ -1,0 +1,287 @@
+[gd_scene load_steps=29 format=3 uid="uid://bv3yyimnibbgu"]
+
+[ext_resource type="Texture2D" uid="uid://wpiti0bf3dgg" path="res://lightDemo/background.png" id="1_1xp1t"]
+[ext_resource type="PackedScene" uid="uid://xknuorrh17iv" path="res://lightDemo/cube.tscn" id="1_carsk"]
+[ext_resource type="Texture2D" uid="uid://5kyv812kit1x" path="res://lightDemo/20230527_light.png" id="2_sbqqk"]
+[ext_resource type="Script" path="res://lightDemo/Lamp.gd" id="3_br1gi"]
+[ext_resource type="Texture2D" uid="uid://be23r041idmeg" path="res://lightDemo/20230527_light2.png" id="3_d5l0t"]
+[ext_resource type="AudioStream" uid="uid://c60mgo7hgkwun" path="res://Music/CarLightSimulation/FollowingCar.mp3" id="6_qavqt"]
+[ext_resource type="Script" path="res://lightDemo/Voice.gd" id="6_s67h3"]
+[ext_resource type="AudioStream" uid="uid://b4ualrmm5svkl" path="res://Music/dong.mp3" id="7_a6vbh"]
+[ext_resource type="AudioStream" uid="uid://uuvdtsuffxht" path="res://Music/CarLightSimulation/InPoorlyLitRoad.mp3" id="8_be8rd"]
+[ext_resource type="AudioStream" uid="uid://dqwf14yfboo5t" path="res://Music/CarLightSimulation/IntersectionsControlledByTrafficLights.mp3" id="9_7t170"]
+[ext_resource type="AudioStream" uid="uid://d2ey2d2l06s80" path="res://Music/CarLightSimulation/IntersectionsNotControlledByTrafficLights.mp3" id="10_dngpl"]
+[ext_resource type="AudioStream" uid="uid://cwklqfd8wn64g" path="res://Music/CarLightSimulation/MeetingWithOtherCar.mp3" id="11_8mxns"]
+[ext_resource type="AudioStream" uid="uid://cwaeyy2t8l363" path="res://Music/CarLightSimulation/OnUnlitRoads.mp3" id="12_hli1w"]
+[ext_resource type="AudioStream" uid="uid://co5fesdeg6i3g" path="res://Music/CarLightSimulation/OnWell-litRoads.mp3" id="13_qnsdk"]
+[ext_resource type="AudioStream" uid="uid://cg1sri0efm85i" path="res://Music/CarLightSimulation/OpenLowBeam.mp3" id="14_soels"]
+[ext_resource type="AudioStream" uid="uid://d24c4nufwswsa" path="res://Music/CarLightSimulation/Overtaking.mp3" id="15_f0ky1"]
+[ext_resource type="AudioStream" uid="uid://cyf54qvyx2c05" path="res://Music/CarLightSimulation/TemporaryParking.mp3" id="16_ts1vv"]
+[ext_resource type="AudioStream" uid="uid://crle44m8etlpm" path="res://Music/CarLightSimulation/ThroughTheArchBridge.mp3" id="17_08d0x"]
+[ext_resource type="AudioStream" uid="uid://dj8bxtt6hnxdl" path="res://Music/CarLightSimulation/ThroughTheCrosswalk.mp3" id="18_msm0n"]
+[ext_resource type="AudioStream" uid="uid://dhqtt6si766qi" path="res://Music/CarLightSimulation/ThroughTheSharpBend.mp3" id="19_a8anb"]
+[ext_resource type="AudioStream" uid="uid://sjq4ixhfv3wr" path="res://Music/CarLightSimulation/ThroughTheSlope.mp3" id="20_ynoeq"]
+[ext_resource type="AudioStream" uid="uid://65i7qlvhujyp" path="res://Music/CarLightSimulation/TurnOffAllLights.mp3" id="21_o8b1d"]
+[ext_resource type="AudioStream" uid="uid://b4dgmq8f6ak8m" path="res://Music/CarLightSimulation/Wrong.mp3" id="22_sx6ff"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_37uyr"]
+polygon = PackedVector2Array(0, 15, 19, -11, 37, 9, -1, 29, -33, 9, -14, -11)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ec86l"]
+load_path = "res://.godot/imported/20230527_light.png-8bb16cd31a32a35d8ee2c1f563d29ada.ctex"
+
+[sub_resource type="Animation" id="Animation_uaj6t"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.941176, 0.956863, 1, 0), Color(1, 1, 1, 1), Color(0.941176, 0.956863, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7plvh"]
+resource_name = "shining"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.945098, 0.956863, 1, 0), Color(0.941176, 0.956863, 0, 1), Color(0.945098, 0.956863, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_35tlf"]
+_data = {
+"RESET": SubResource("Animation_uaj6t"),
+"shining": SubResource("Animation_7plvh")
+}
+
+[node name="LightDemo" type="Node2D"]
+
+[node name="Ground" type="Sprite2D" parent="."]
+light_mask = 524288
+position = Vector2(25.6896, -2.125)
+scale = Vector2(1.23926, 0.78125)
+texture = ExtResource("1_1xp1t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Entities" type="Node2D" parent="."]
+position = Vector2(25.6896, -1.125)
+
+[node name="Cube3" parent="Entities" instance=ExtResource("1_carsk")]
+position = Vector2(73, -66)
+
+[node name="Cube4" parent="Entities" instance=ExtResource("1_carsk")]
+position = Vector2(-42, -46)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cube2" parent="Entities" instance=ExtResource("1_carsk")]
+position = Vector2(83, 33)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cube" parent="Entities" instance=ExtResource("1_carsk")]
+position = Vector2(-74, 49)
+
+[node name="FrontLight" type="Sprite2D" parent="Entities"]
+position = Vector2(5, 8)
+texture = ExtResource("2_sbqqk")
+script = ExtResource("3_br1gi")
+
+[node name="SpritePointLight2D" type="PointLight2D" parent="Entities/FrontLight"]
+enabled = false
+texture = ExtResource("3_d5l0t")
+
+[node name="ShadowPointLight2D2" type="PointLight2D" parent="Entities/FrontLight"]
+enabled = false
+range_item_cull_mask = 524288
+shadow_enabled = true
+texture = ExtResource("3_d5l0t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Entities/FrontLight"]
+occluder = SubResource("OccluderPolygon2D_37uyr")
+
+[node name="LeftTurnSignalF" type="Sprite2D" parent="Entities"]
+self_modulate = Color(0.941176, 0.956863, 1, 0)
+position = Vector2(-30, 0)
+scale = Vector2(0.3, 0.3)
+texture = SubResource("CompressedTexture2D_ec86l")
+
+[node name="LeftTurnSignalAnim" type="AnimationPlayer" parent="Entities/LeftTurnSignalF"]
+libraries = {
+"": SubResource("AnimationLibrary_35tlf")
+}
+
+[node name="RightTurnSignalF" type="Sprite2D" parent="Entities"]
+self_modulate = Color(0.941176, 0.956863, 1, 0)
+position = Vector2(42, -1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_sbqqk")
+
+[node name="RightTurnSignalAnim" type="AnimationPlayer" parent="Entities/RightTurnSignalF"]
+libraries = {
+"": SubResource("AnimationLibrary_35tlf")
+}
+
+[node name="LeftTurnSignalB" type="Sprite2D" parent="Entities"]
+self_modulate = Color(0.941176, 0.956863, 1, 0)
+position = Vector2(-30.4, 27.6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_sbqqk")
+
+[node name="LeftTurnSignalAnim" type="AnimationPlayer" parent="Entities/LeftTurnSignalB"]
+libraries = {
+"": SubResource("AnimationLibrary_35tlf")
+}
+
+[node name="RightTurnSignalB" type="Sprite2D" parent="Entities"]
+self_modulate = Color(0.941176, 0.956863, 1, 0)
+position = Vector2(41.6, 26.6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_sbqqk")
+
+[node name="RightTurnSignalAnim" type="AnimationPlayer" parent="Entities/RightTurnSignalB"]
+libraries = {
+"": SubResource("AnimationLibrary_35tlf")
+}
+
+[node name="WidthLF" type="Sprite2D" parent="Entities"]
+self_modulate = Color(0.941176, 0.956863, 1, 0)
+position = Vector2(-43, -8)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_sbqqk")
+
+[node name="WidthLFAnim" type="AnimationPlayer" parent="Entities/WidthLF"]
+libraries = {
+"": SubResource("AnimationLibrary_35tlf")
+}
+
+[node name="WidthRF" type="Sprite2D" parent="Entities"]
+self_modulate = Color(0.941176, 0.956863, 1, 0)
+position = Vector2(54.6, -10.4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_sbqqk")
+
+[node name="WidthRFAnim" type="AnimationPlayer" parent="Entities/WidthRF"]
+libraries = {
+"": SubResource("AnimationLibrary_35tlf")
+}
+
+[node name="WidthLB" type="Sprite2D" parent="Entities"]
+self_modulate = Color(0.941176, 0.956863, 1, 0)
+position = Vector2(-42, 38)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_sbqqk")
+
+[node name="WidthLBAnim" type="AnimationPlayer" parent="Entities/WidthLB"]
+libraries = {
+"": SubResource("AnimationLibrary_35tlf")
+}
+
+[node name="WidthRB" type="Sprite2D" parent="Entities"]
+self_modulate = Color(0.941176, 0.956863, 1, 0)
+position = Vector2(54, 35)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_sbqqk")
+
+[node name="WidthRBAnim" type="AnimationPlayer" parent="Entities/WidthRB"]
+libraries = {
+"": SubResource("AnimationLibrary_35tlf")
+}
+
+[node name="Voice" type="Node2D" parent="."]
+script = ExtResource("6_s67h3")
+
+[node name="FollowingCar" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("6_qavqt")
+
+[node name="Dong" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("7_a6vbh")
+
+[node name="InPoorlyLitRoad" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("8_be8rd")
+
+[node name="IntersectionsControlledByTrafficLights" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("9_7t170")
+
+[node name="IntersectionsNotControlledByTrafficLights" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("10_dngpl")
+
+[node name="MeetingWithOtherCar" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("11_8mxns")
+
+[node name="OnUnlitRoads" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("12_hli1w")
+
+[node name="OnWell-litRoads" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("13_qnsdk")
+
+[node name="OpenLowBeam" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("14_soels")
+
+[node name="Overtaking" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("15_f0ky1")
+
+[node name="TemporaryParking" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("16_ts1vv")
+
+[node name="ThroughTheArchBridge" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("17_08d0x")
+
+[node name="ThroughTheCrosswalk" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("18_msm0n")
+
+[node name="ThroughTheSharpBend" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("19_a8anb")
+
+[node name="ThroughTheSlope" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("20_ynoeq")
+
+[node name="TurnOffAllLights" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("21_o8b1d")
+
+[node name="Wrong" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("22_sx6ff")
+
+[node name="Timer" type="Timer" parent="Voice"]
+wait_time = 3.0
+one_shot = true
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI"]
+offset_left = -277.0
+offset_top = -150.0
+offset_right = -65.0
+offset_bottom = 20.0
+theme_override_font_sizes/normal_font_size = 12
+text = "按键 1 ：全车灯关闭
+按键 2 ：示廓灯
+按键 3 ：近光灯
+按键 W ：临时前照远光灯，松开关闭
+按键 S ：远光
+按键 A ：左闪光灯
+按键 D ：右闪光灯
+按键 L ：危险警示灯"
+
+[node name="Start" type="Button" parent="UI"]
+offset_left = 166.0
+offset_top = 82.0
+offset_right = 248.0
+offset_bottom = 127.0
+text = "开始"
+
+[connection signal="timeout" from="Voice/Timer" to="Voice" method="_on_timer_timeout"]
+[connection signal="pressed" from="UI/Start" to="Voice" method="_on_start_pressed"]

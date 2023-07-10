@@ -21,6 +21,7 @@ var bus_id: int
 @onready var windowMode2 = $ScreenSize/WindowModeContainer/FullScreenCheckButton
 @onready var windowMode3 = $ScreenSize/WindowModeContainer/ExclusiveFullScreenCheckButton
 
+
 func _ready():
 	#print_debug(get_tree().root.size)
 	#print_debug(get_tree().root.position)

@@ -35,6 +35,13 @@ stereo = true
 [node name="Settings" type="CanvasLayer"]
 script = ExtResource("1_8obd1")
 
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -32.0
+offset_top = -24.0
+offset_right = 1952.0
+offset_bottom = 1104.0
+
 [node name="BG" type="Sprite2D" parent="."]
 position = Vector2(1320, 512)
 scale = Vector2(30, 30)
@@ -199,9 +206,10 @@ stream = SubResource("AudioStreamWAV_ykxm5")
 bus = &"BtnSound"
 
 [node name="Button" type="TextureButton" parent="."]
-offset_left = 1720.0
-offset_right = 1752.0
-offset_bottom = 32.0
+offset_left = 1728.0
+offset_top = -24.0
+offset_right = 1760.0
+offset_bottom = 8.0
 scale = Vector2(8, 8)
 texture_normal = ExtResource("9_k2yoy")
 texture_pressed = ExtResource("9_k2yoy")
@@ -266,9 +274,9 @@ vertical_alignment = 1
 [connection signal="value_changed" from="Volume/ButtonVolume/BVHSlider" to="." method="_on_bvh_slider_value_changed"]
 [connection signal="value_changed" from="Volume/SFXVolume/SFXVHSlider" to="." method="_on_sfxvh_slider_value_changed"]
 [connection signal="item_selected" from="ScreenSize/ScreenSizeItemList" to="." method="_on_screen_size_item_list_item_selected"]
-[connection signal="toggled" from="ScreenSize/WindowModeContainer/WindowedCheckButton" to="." method="_on_check_button_toggled" binds= [0, "WindowedCheckButton"]]
-[connection signal="toggled" from="ScreenSize/WindowModeContainer/FullScreenCheckButton" to="." method="_on_check_button_toggled" binds= [1, "FullScreenCheckButton"]]
-[connection signal="toggled" from="ScreenSize/WindowModeContainer/ExclusiveFullScreenCheckButton" to="." method="_on_check_button_toggled" binds= [2, "ExclusiveFullScreenCheckButton"]]
+[connection signal="toggled" from="ScreenSize/WindowModeContainer/WindowedCheckButton" to="." method="_on_check_button_toggled" binds= [0, "Windowed"]]
+[connection signal="toggled" from="ScreenSize/WindowModeContainer/FullScreenCheckButton" to="." method="_on_check_button_toggled" binds= [1, "FullStreen"]]
+[connection signal="toggled" from="ScreenSize/WindowModeContainer/ExclusiveFullScreenCheckButton" to="." method="_on_check_button_toggled" binds= [2, "ExclusiveFullScreen"]]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="SettingMenu/VolumeSet" to="." method="_on_volume_set_pressed"]
 [connection signal="pressed" from="SettingMenu/ScreenSizeSet" to="." method="_on_screen_size_set_pressed"]

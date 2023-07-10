@@ -10,6 +10,8 @@ func _ready():
 	
 	settingMenu.hide()
 	
+	# 当前创景不可以打开系统菜单
+	CallSystemMenu.statu_current_scene = false
 	
 func _on_load_game_pressed():
 	buttonSound.play()

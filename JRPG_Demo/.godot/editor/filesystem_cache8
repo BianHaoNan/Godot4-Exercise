@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1688708081
+::res://::1688912327
 ::res://AudioBuses/::1687786085
 AudioBus.tres::AudioBusLayout::2858011296728646051::1687786085::0::1::::<><>::
 ::res://Resources/::1687589120
@@ -132,7 +132,9 @@ FarmerRed.png::CompressedTexture2D::3164864924518201704::1687588154::1687588154:
 Dark Fantasy Studio- Fallen leaves (seamless).mp3::AudioStreamMP3::5525121556627420658::1688366179::1688366179::1::::<><>::
 Epic Medieval - Clear Waters.mp3::AudioStreamMP3::4197977205950371033::1687750478::1687767009::1::::<><>::
 Epic Medieval - Theme.mp3::AudioStreamMP3::1998244692428244454::1687765336::1687765733::1::::<><>::
-::res://Resources/Mutilmedias/Audios/OneShotSmple/::1687784852
+::res://Resources/Mutilmedias/Audios/OneShotSmple/::1688895622
+Dark Fantasy Studio- Earth spell 1.mp3::AudioStreamMP3::4600093998889285959::1688895622::1688895622::1::::<><>::
+Dark Fantasy Studio- Earth spell 2.mp3::AudioStreamMP3::8367420517381180534::1688895622::1688895622::1::::<><>::
 PL_80RP1_01_Kick_Sample.wav::AudioStreamWAV::2499873145696764632::1687765933::1687765933::1::::<><>::
 PL_80RP1_03_Percussion_Sample.wav::AudioStreamWAV::7788947636050658241::1687784844::1687784852::1::::<><>::
 PL_80RP1_05_Hat_Sample.wav::AudioStreamWAV::8050363297687742006::1687781907::1687781907::1::::<><>::
@@ -467,35 +469,39 @@ WinterTrees.png::CompressedTexture2D::6726668036113475602::1687588030::168758803
 32x32Small.png::CompressedTexture2D::1218229690786577610::1687588076::1687588076::1::::<><>::
 ::res://Scenes/::1688177564
 readme.txt::TextFile::-1::1688177564::0::1::::<><>::
-::res://Scenes/Aisles/::1688375218
-Loading.tscn::PackedScene::3532499648023776645::1688375218::0::1::::<><>::uid://b2h1e4eigtblq<>uid://cff41572ef88q<>uid://bqa566276t61o<>uid://cmlbx4colspn8
-::res://Scenes/Blackground/::1688375219
-Main.tscn::PackedScene::5246474447221212375::1688375219::0::1::::<><>::uid://b2h1e4eigtblq<>uid://bx2p52xsxi0d3<>uid://ddbbllq3pn2b3<>res://Scripts/MainMenus.gd<>uid://de8vw5h7jm3d8<>uid://mproskeq7pwu<>uid://lejcpgld37nw
-::res://Scenes/Chapters/::1688707281
-Chapter_000.tscn::PackedScene::2109144870816328219::1688707281::0::1::::<><>::uid://d0bx5c2hamnqm<>res://Scripts/Chapter_000/Begining.gd
-::res://Scenes/Charactors/::1688707281
-Player_001.tscn::PackedScene::1098230021962237994::1688707281::0::1::::<><>::res://Scripts/Characters/Player_001_Controller.gd<>uid://dcvtq2ptsx5fu
+::res://Scenes/Aisles/::1688907938
+Loading.tscn::PackedScene::3532499648023776645::1688907938::0::1::::<><>::uid://b2h1e4eigtblq<>uid://cff41572ef88q<>uid://bqa566276t61o<>uid://cmlbx4colspn8
+::res://Scenes/Blackground/::1688907937
+Main.tscn::PackedScene::5246474447221212375::1688907937::0::1::::<><>::uid://b2h1e4eigtblq<>uid://bx2p52xsxi0d3<>uid://ddbbllq3pn2b3<>res://Scripts/MainMenus.gd<>uid://de8vw5h7jm3d8<>uid://mproskeq7pwu<>uid://lejcpgld37nw
+::res://Scenes/Chapters/::1688907938
+Chapter_000.tscn::PackedScene::2109144870816328219::1688907938::0::1::::<><>::uid://d0bx5c2hamnqm<>res://Scripts/Chapters/Chapter_000/Begining.gd
+::res://Scenes/Charactors/::1688907937
+Player_001.tscn::PackedScene::1098230021962237994::1688907937::0::1::::<><>::res://Scripts/Characters/Player_001_Controller.gd<>uid://dcvtq2ptsx5fu
 ::res://Scenes/Decorations/::1687586725
 ::res://Scenes/Events/::1687586830
-::res://Scenes/Menus/::1688375220
-Settings.tscn::PackedScene::780885613181318592::1688375220::0::1::::<><>::res://Scripts/Settings.gd<>uid://lnv0ygtw3021<>uid://r5c7fmhffi1c<>uid://dv1hjg7ch6qlh<>uid://daegnh4puxdnw<>uid://vqtn81xnp3se<>uid://b1ln6pxvua3td<>uid://kf8wmncws1g3<>uid://dh7sfirebswiu<>uid://ne237acl4760<>uid://du5eq4glgh6ny<>uid://7ffqvytjm3jx<>uid://bbvjfhw8hfwrg<>uid://k1r2xmj7ojrf
-::res://Scenes/Tilemaps/::1688707280
-Chatper_000_TileMap_Woodland_Summer.tscn::PackedScene::8917497731509902816::1688707280::0::1::::<><>::uid://d0gpa5rlqtw6<>uid://c8pqd4eb2g2vy<>uid://ddoralsuctb46<>uid://ddax0k3nk4eh<>uid://crssnwvnvk0nm<>uid://bh1ce6ygcdiwa<>uid://0lv2faw1p0cq<>uid://c2j8enci0c5o8<>uid://6fojg6q3lcrm<>uid://dchq0qo0sim2n<>uid://biy5tpl30qu68<>uid://b077gib04a0a4<>uid://d15qpt8hpv0uv<>uid://sek3khr6lrvs<>uid://cx53njs0xqlxu<>uid://cpecxs1ntexte<>uid://bw034ftue2u4x<>uid://c5t0oiebvigh6<>res://Scripts/TileMapCustomDataLayersTest.gd
-::res://Scripts/::1688707280
-MainMenus.gd::GDScript::-1::1688365343::0::1::::<>Node<>::
-Settings.gd::GDScript::-1::1688707280::0::1::::<>CanvasLayer<>::
-TileMapCustomDataLayersTest.gd::GDScript::-1::1688707280::0::1::::<>TileMap<>::
-::res://Scripts/Chapter_000/::1688656328
-Begining.gd::GDScript::-1::1688656328::0::1::::<>Node<>::
+::res://Scenes/Menus/::1688907936
+Settings.tscn::PackedScene::780885613181318592::1688907936::0::1::::<><>::res://Scripts/Settings.gd<>uid://lnv0ygtw3021<>uid://r5c7fmhffi1c<>uid://dv1hjg7ch6qlh<>uid://daegnh4puxdnw<>uid://vqtn81xnp3se<>uid://b1ln6pxvua3td<>uid://kf8wmncws1g3<>uid://dh7sfirebswiu<>uid://ne237acl4760<>uid://du5eq4glgh6ny<>uid://7ffqvytjm3jx<>uid://bbvjfhw8hfwrg<>uid://k1r2xmj7ojrf
+SystemMenu.tscn::PackedScene::2204894585138805711::1688907936::0::1::::<><>::uid://dv1hjg7ch6qlh<>res://Scripts/SystemMenu.gd<>uid://b1vmsq4ie0vkq<>uid://daegnh4puxdnw<>uid://c8ytyswu3han5<>uid://b3rwiaq0lkmdn<>uid://ne237acl4760<>uid://rwopjqnhb5t4<>uid://7ffqvytjm3jx
+::res://Scenes/Tilemaps/::1688875016
+Chatper_000_TileMap_Woodland_Summer.tscn::PackedScene::8917497731509902816::1688875016::0::1::::<><>::uid://d0gpa5rlqtw6<>uid://c8pqd4eb2g2vy<>uid://ddoralsuctb46<>uid://ddax0k3nk4eh<>uid://crssnwvnvk0nm<>uid://bh1ce6ygcdiwa<>uid://0lv2faw1p0cq<>uid://c2j8enci0c5o8<>uid://6fojg6q3lcrm<>uid://dchq0qo0sim2n<>uid://biy5tpl30qu68<>uid://b077gib04a0a4<>uid://d15qpt8hpv0uv<>uid://sek3khr6lrvs<>uid://cx53njs0xqlxu<>uid://cpecxs1ntexte<>uid://bw034ftue2u4x<>uid://c5t0oiebvigh6<>res://Scripts/TileMapLayers.gd
+::res://Scripts/::1688907671
+MainMenus.gd::GDScript::-1::1688907310::0::1::::<>Node<>::
+Settings.gd::GDScript::-1::1688907671::0::1::::<>CanvasLayer<>::
+SystemMenu.gd::GDScript::-1::1688901992::0::1::::<>Control<>::
+TileMapLayers.gd::GDScript::-1::1688906911::0::1::::<>TileMap<>::
+::res://Scripts/Chapters/::1688875127
+::res://Scripts/Chapters/Chapter_000/::1688907209
+Begining.gd::GDScript::-1::1688907209::0::1::::<>Node<>::
 ::res://Scripts/Characters/::1688653063
 Move.gd::GDScript::-1::1688373170::0::1::::Move1<>Node<>::
 Player_001_Controller.gd::GDScript::-1::1688653063::0::1::::<>Move<>::
-::res://Scripts/Global/::1688366375
-Loading.gd::GDScript::-1::1688366375::0::1::::<>Node<>::
+::res://Scripts/Global/::1688907932
+CallSystemMenu.gd::GDScript::-1::1688907932::0::1::::<>Node<>::
+Loading.gd::GDScript::-1::1688907543::0::1::::<>Node<>::
 Saving.gd::GDScript::-1::1688024927::0::1::::<>Node<>::
-::res://UITheme/::1688373034
+::res://UITheme/::1688907671
 CheckBoxTheme.tres::Theme::714253923861490880::1687873846::0::1::::<><>::uid://bkuqbigtb1b1y<>uid://coq43hqsrkx5t
-ItemListTheme.tres::Theme::4234884278455273753::1688373034::0::1::::<><>::uid://8t3lobe5sdy8
+ItemListTheme.tres::Theme::4234884278455273753::1688907671::0::1::::<><>::uid://8t3lobe5sdy8
 MainMenuButton.tres::Theme::1103111373699114126::1687780120::0::1::::<><>::uid://mproskeq7pwu<>uid://bx2p52xsxi0d3<>uid://ddbbllq3pn2b3
 RadioChackBoxGroup.tres::ButtonGroup::7717746326147050972::1687874377::0::1::::<><>::
-SliderTheme.tres::Theme::1508174373145442176::1688373034::0::1::::<><>::uid://cefri0hsxmnpk<>uid://cmgwienavvo7w<>uid://dqe0rmajliiik
+SliderTheme.tres::Theme::1508174373145442176::1688907671::0::1::::<><>::uid://cefri0hsxmnpk<>uid://cmgwienavvo7w<>uid://dqe0rmajliiik

@@ -1,3 +1,10 @@
-res://Scenes/Charactors/Player_001.tscn
+res://Scenes/Menus/SystemMenu.tscn
 res://Scripts/Settings.gd
-res://Scripts/TileMapCustomDataLayersTest.gd
+res://UITheme/SliderTheme.tres
+res://UITheme/ItemListTheme.tres
+res://Scenes/Menus/Settings.tscn
+res://Scenes/Blackground/Main.tscn
+res://Scenes/Charactors/Player_001.tscn
+res://Scenes/Chapters/Chapter_000.tscn
+res://Scenes/Aisles/Loading.tscn
+res://Scripts/Global/CallSystemMenu.gd

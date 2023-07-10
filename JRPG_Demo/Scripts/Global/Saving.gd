@@ -1,5 +1,7 @@
 extends Node
 
+# 是否允许加载存档
+var is_load_game : bool = true
 
 # 存档文件的放置路径
 const SAVE_CONFIG_FILE = 'res://SaveConfig.save'
@@ -29,22 +31,23 @@ func SaveConfig():
 
 
 func LoadConfig():
-	var file = FileAccess.open(SAVE_CONFIG_FILE, FileAccess.READ)
-	# 判断文件是否已存在
-	if FileAccess.file_exists(SAVE_CONFIG_FILE):
-		# 读取全部内容，参考file.eof_reached()方法的说明，解释虽然看不明白，但应该更保险吧
-		while file.get_position() < file.get_length():
-			var data = JSON.parse_string(file.get_line())
-			# 加载数据
-			master_vol = data['master_vol']
-			bgm_vol = data['bgm_vol']
-			btnSound_vol = data['btnSound_vol']
-			sfx_vol = data['sfx_vol']
-			screen_size = data['screen_size']
-			screen_mode = data['screen_mode']
-		return true
-	else:
-		return false
+	if is_load_game:
+		var file = FileAccess.open(SAVE_CONFIG_FILE, FileAccess.READ)
+		# 判断文件是否已存在
+		if FileAccess.file_exists(SAVE_CONFIG_FILE):
+			# 读取全部内容，参考file.eof_reached()方法的说明，解释虽然看不明白，但应该更保险吧
+			while file.get_position() < file.get_length():
+				var data = JSON.parse_string(file.get_line())
+				# 加载数据
+				master_vol = data['master_vol']
+				bgm_vol = data['bgm_vol']
+				btnSound_vol = data['btnSound_vol']
+				sfx_vol = data['sfx_vol']
+				screen_size = data['screen_size']
+				screen_mode = data['screen_mode']
+			return true
+		else:
+			return false
 
 
 func SaveGame_Player():

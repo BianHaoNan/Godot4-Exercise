@@ -48,7 +48,7 @@ func LoadGame(current_scene, next_scene):
 		# 场景加载成功
 		if load_status == 3:
 			# 用于测试进度条显示是否正常
-			await get_tree().create_timer(2).timeout
+			#await get_tree().create_timer(2).timeout
 			# 跳转至场景
 			var next = ResourceLoader.load_threaded_get(next_scene).instantiate()
 			get_tree().root.call_deferred('add_child', next)

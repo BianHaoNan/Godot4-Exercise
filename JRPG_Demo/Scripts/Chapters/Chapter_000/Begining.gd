@@ -13,6 +13,6 @@ func _ready():
 	add_child(player_001)
 	# 将要使用的角色传给tileMap脚本
 	tileMap.character_body = player_001
-	
 	# 当前创景可以打开系统菜单
 	CallSystemMenu.statu_current_scene = true
+

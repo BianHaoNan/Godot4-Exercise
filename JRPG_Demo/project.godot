@@ -24,6 +24,7 @@ Saving="*res://Scripts/Global/Saving.gd"
 Loading="*res://Scripts/Global/Loading.gd"
 Move="*res://Scripts/Characters/Move.gd"
 CallSystemMenu="*res://Scripts/Global/CallSystemMenu.gd"
+GamePausedStatu="*res://Scripts/Global/GamePausedStatu.gd"
 
 [display]
 

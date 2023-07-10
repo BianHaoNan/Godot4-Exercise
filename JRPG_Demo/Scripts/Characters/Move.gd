@@ -1,6 +1,9 @@
 extends Node
 class_name Move1
 #var body : CharacterBody2D
+
+#var move_statu : bool
+var iaaa = 1
 func Move(speed : float, body : CharacterBody2D, ani : AnimatedSprite2D):
 	# 通过get_axis可获得按键力度，手柄应该可用
 	var directionX := Input.get_axis("left","right")
@@ -50,3 +53,6 @@ func Move(speed : float, body : CharacterBody2D, ani : AnimatedSprite2D):
 	body.set_velocity(Vector2(directionX * speed, directionY * speed))
 	
 	body.move_and_slide()
+	
+	# 玩家移动后修改游戏内系统菜单展示的位置
+	CallSystemMenu.menu_position = body.position

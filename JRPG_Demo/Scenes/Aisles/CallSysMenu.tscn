@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdbpllx8lj2u6"]
+
+[ext_resource type="Script" path="res://Scripts/Chapters/Chapter_000/DontStopSysMenuControl.gd" id="1_ixuvh"]
+
+[node name="CallSysMenu" type="Node"]
+process_mode = 3
+script = ExtResource("1_ixuvh")

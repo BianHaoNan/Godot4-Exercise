@@ -26,6 +26,16 @@ func _on_settings_texture_button_pressed():
 
 func _on_return_main_menu_texture_button_pressed():
 	button_sound.play()
+	# 返回前，取消游戏暂停
+	GamePausedStatu.paused_statu = false
+	# 返回后不允许加载设置存档
+	Saving.is_load_game = false
+	GamePausedStatu.ChangePausedStatu()
+	
+	# 保存游戏
+	
+	
+	# 加载主界面
 	Loading.LoadGame(self, "res://Scenes/Blackground/Main.tscn")
 	
 
@@ -35,5 +45,6 @@ func _on_save_and_exit_texture_button_pressed():
 
 func _on_close_texture_button_pressed():
 	button_sound.play()
+	# 按键音播放完毕后关闭菜单
 	await button_sound.finished
 	CallSystemMenu.SysMenuSwitch()

@@ -15,3 +15,4 @@ func CMove():
 func _init():
 	player_name = 'Barbala'
 	print_debug("From Child Init()")
+	print_debug('from child ,print p player_name : ', PScript.player_name)

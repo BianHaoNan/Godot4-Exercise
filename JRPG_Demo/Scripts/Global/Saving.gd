@@ -15,6 +15,27 @@ var sfx_vol = 0.50
 var screen_size : int = 0
 var screen_mode : int = 0
 
+# 游戏内容存档信息
+# 存储场景信息时，应该不需要按场景保存，像存玩家角色一样，只需要存储该角色或者物体的状态、位置、所处场景即可
+var character_name	# 哪个角色（玩家、npc、敌人）
+var character_stay_scene	# 角色所处场景
+var character_position : Vector2	# 角色所处位置
+var character_statu_lv : int	# 角色等级
+var character_statu_hp : int	# 角色血量
+var character_item_list : Array	# 角色物品列表
+
+'''# 每个场景个建立一个存档信息，存储当前场景中物体、npc、敌人的信息
+var scenes_statu : Dictionary	# key是场景，value是场景内信息
+var scenes_statu_value : Array	# scenes_statu的value值
+var scene_objects_statu : Dictionary	# key是物体，value是物体状态
+var scene_enemies_statu : Dictionary	# key是敌人，value是敌人状态
+var scene_npc_statu : Dictionary	# key是npc，value是npc状态'''
+var object_name
+var object_stay_scene
+var object_statu
+
+
+# 游戏设置存档
 func SaveConfig():
 	# 打开文件
 	var file = FileAccess.open(SAVE_CONFIG_FILE, FileAccess.WRITE)
@@ -29,7 +50,7 @@ func SaveConfig():
 	# 将内容写入文件
 	file.store_line(JSON.stringify(data))
 
-
+# 游戏设置读取存档
 func LoadConfig():
 	if is_load_game:
 		var file = FileAccess.open(SAVE_CONFIG_FILE, FileAccess.READ)
@@ -49,9 +70,10 @@ func LoadConfig():
 		else:
 			return false
 
-
+# 游戏内容存档
 func SaveGame_Player():
 	pass
 
+# 游戏内容读取存档
 func LoadGame_Player():
 	pass

@@ -2,8 +2,11 @@ extends Node
 class_name Move1
 #var body : CharacterBody2D
 
+
 #var move_statu : bool
-var iaaa = 1
+var level : int
+var hp : int
+
 func Move(speed : float, body : CharacterBody2D, ani : AnimatedSprite2D):
 	# 通过get_axis可获得按键力度，手柄应该可用
 	var directionX := Input.get_axis("left","right")

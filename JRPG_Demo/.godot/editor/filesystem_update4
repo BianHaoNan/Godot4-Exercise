@@ -2,7 +2,12 @@ res://Scenes/Menus/SystemMenu.tscn
 res://Scripts/Settings.gd
 res://UITheme/SliderTheme.tres
 res://UITheme/ItemListTheme.tres
-res://Scripts/Global/Saving.gd
+res://Scenes/Menus/Settings.tscn
+res://Scenes/Blackground/Main.tscn
+res://Scenes/Chapters/Chapter_000.tscn
 res://Scenes/Charactors/Player_001.tscn
-res://Scripts/Characters/Move.gd
-res://Scripts/Characters/Player_001_Controller.gd
+res://Scenes/Aisles/CallSysMenu.tscn
+res://Scripts/Global/CallSystemMenu.gd
+res://Scripts/Chapters/Chapter_000/DontStopSysMenuControl.gd
+res://Scripts/Chapters/Chapter_000/Begining.gd
+res://Scripts/SystemMenu.gd

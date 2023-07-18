@@ -1,7 +1,8 @@
 extends Node
 
 # 游戏内呼出系统菜单
-@onready var sys_menu_scene = preload("res://Scenes/Menus/SystemMenu.tscn")
+#@onready var sys_menu_scene = preload("res://Scenes/Menus/SystemMenu.tscn")
+# 菜单是否已开启
 var sys_menu_statu = false
 var sys_menu
 
@@ -10,10 +11,8 @@ var menu_position : Vector2 = Vector2(0, 0)
 # 当前场景是否允许打开系统菜单
 var statu_current_scene = false
 
-func _ready():
-	sys_menu = sys_menu_scene.instantiate()
-
 func SysMenuSwitch():
+	#print_debug('statu_current_scene: ', statu_current_scene)
 	if statu_current_scene:
 		if !sys_menu_statu:
 			get_node("/root/Chapter_000").add_child(sys_menu)
@@ -26,6 +25,7 @@ func SysMenuSwitch():
 		else :
 			#print_debug('close me')
 			get_node("/root/Chapter_000").remove_child(sys_menu)
+			#sys_menu.queue_free()
 			sys_menu_statu = false
 			# 关闭菜单时取消暂停游戏
 			GamePausedStatu.paused_statu = false

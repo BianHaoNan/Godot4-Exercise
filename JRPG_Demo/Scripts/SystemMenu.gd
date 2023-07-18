@@ -31,7 +31,7 @@ func _on_return_main_menu_texture_button_pressed():
 	# 返回后不允许加载设置存档
 	Saving.is_load_game = false
 	GamePausedStatu.ChangePausedStatu()
-	
+	CallSystemMenu.sys_menu_statu = false
 	# 保存游戏
 	
 	

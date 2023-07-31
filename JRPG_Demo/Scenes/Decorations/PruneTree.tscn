@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7j5jf5nqvvpl"]
+
+[ext_resource type="Texture2D" uid="uid://dchq0qo0sim2n" path="res://Resources/Tilemaps/Nature/Trees.png" id="1_yjn0n"]
+[ext_resource type="PackedScene" uid="uid://b5h671rcj5jxc" path="res://Scenes/Decorations/Tips.tscn" id="2_k4asp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dbre"]
+atlas = ExtResource("1_yjn0n")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lka6o"]
+atlas = ExtResource("1_yjn0n")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwn6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dbre")
+}],
+"loop": false,
+"name": &"prune1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lka6o")
+}],
+"loop": false,
+"name": &"prune2",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1ldc"]
+size = Vector2(6, 6)
+
+[node name="Prune" type="AnimatedSprite2D"]
+z_index = 1
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_cwn6s")
+animation = &"prune2"
+
+[node name="Tips" parent="." instance=ExtResource("2_k4asp")]
+z_index = 2
+offset_left = -10.0
+offset_top = -8.0
+offset_right = -10.0
+offset_bottom = -8.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 4)
+shape = SubResource("RectangleShape2D_r1ldc")

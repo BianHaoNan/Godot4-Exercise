@@ -1,5 +1,5 @@
-2a60927148abd1d33b818b535e306557
-::res://::1687767299
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1690160840
 icon.svg::CompressedTexture2D::3146122336368430660::1686288840::1686288844::1::::<><>::
 Main.tscn::PackedScene::609528277723222629::1686291446::0::1::::<><>::uid://bsmmpa3orsfqj
 ::res://lightDemo/::1687577225
@@ -10,7 +10,7 @@ background.png::CompressedTexture2D::1575640351234066670::1685201622::1686291354
 cube.tscn::PackedScene::1635812980370797381::1685207050::0::1::::<><>::uid://bo6qr7ucaav77<>uid://cmqq8jg6xl04b
 cube_n.png::CompressedTexture2D::5649168421609346023::1685202388::1686291354::1::::<><>::
 Lamp.gd::GDScript::-1::1686313786::0::1::::<>Sprite2D<>::
-light_demo.tscn::PackedScene::3919689483411413516::1687577225::0::1::::<><>::uid://wpiti0bf3dgg<>uid://xknuorrh17iv<>uid://5kyv812kit1x<>res://lightDemo/Lamp.gd<>uid://be23r041idmeg<>uid://c60mgo7hgkwun<>res://lightDemo/Voice.gd<>uid://b4ualrmm5svkl<>uid://uuvdtsuffxht<>uid://dqwf14yfboo5t<>uid://d2ey2d2l06s80<>uid://cwklqfd8wn64g<>uid://cwaeyy2t8l363<>uid://co5fesdeg6i3g<>uid://cg1sri0efm85i<>uid://d24c4nufwswsa<>uid://cyf54qvyx2c05<>uid://crle44m8etlpm<>uid://dj8bxtt6hnxdl<>uid://dhqtt6si766qi<>uid://sjq4ixhfv3wr<>uid://65i7qlvhujyp<>uid://b4dgmq8f6ak8m
+light_demo.tscn::PackedScene::3919689483411413516::1687577225::0::1::::<><>::uid://wpiti0bf3dgg::::res://lightDemo/background.png<>uid://xknuorrh17iv::::res://lightDemo/cube.tscn<>uid://5kyv812kit1x::::res://lightDemo/20230527_light.png<>res://lightDemo/Lamp.gd<>uid://be23r041idmeg::::res://lightDemo/20230527_light2.png<>uid://c60mgo7hgkwun::::res://Music/CarLightSimulation/FollowingCar.mp3<>res://lightDemo/Voice.gd<>uid://b4ualrmm5svkl::::res://Music/dong.mp3<>uid://uuvdtsuffxht::::res://Music/CarLightSimulation/InPoorlyLitRoad.mp3<>uid://dqwf14yfboo5t::::res://Music/CarLightSimulation/IntersectionsControlledByTrafficLights.mp3<>uid://d2ey2d2l06s80::::res://Music/CarLightSimulation/IntersectionsNotControlledByTrafficLights.mp3<>uid://cwklqfd8wn64g::::res://Music/CarLightSimulation/MeetingWithOtherCar.mp3<>uid://cwaeyy2t8l363::::res://Music/CarLightSimulation/OnUnlitRoads.mp3<>uid://co5fesdeg6i3g::::res://Music/CarLightSimulation/OnWell-litRoads.mp3<>uid://cg1sri0efm85i::::res://Music/CarLightSimulation/OpenLowBeam.mp3<>uid://d24c4nufwswsa::::res://Music/CarLightSimulation/Overtaking.mp3<>uid://cyf54qvyx2c05::::res://Music/CarLightSimulation/TemporaryParking.mp3<>uid://crle44m8etlpm::::res://Music/CarLightSimulation/ThroughTheArchBridge.mp3<>uid://dj8bxtt6hnxdl::::res://Music/CarLightSimulation/ThroughTheCrosswalk.mp3<>uid://dhqtt6si766qi::::res://Music/CarLightSimulation/ThroughTheSharpBend.mp3<>uid://sjq4ixhfv3wr::::res://Music/CarLightSimulation/ThroughTheSlope.mp3<>uid://65i7qlvhujyp::::res://Music/CarLightSimulation/TurnOffAllLights.mp3<>uid://b4dgmq8f6ak8m::::res://Music/CarLightSimulation/Wrong.mp3
 Voice.gd::GDScript::-1::1687577223::0::1::::<>Node2D<>::
 ::res://Music/::1686307553
 dong.mp3::AudioStreamMP3::4463205260030842275::1686305987::1686306002::1::::<><>::

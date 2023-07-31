@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcxebbyyplnii"]
+
+[ext_resource type="PackedScene" uid="uid://b7j5jf5nqvvpl" path="res://Scenes/Decorations/PruneTree.tscn" id="1_h7ube"]
+[ext_resource type="PackedScene" uid="uid://bdbs5g6847vbx" path="res://Scenes/Decorations/CutDownTree.tscn" id="2_anki8"]
+
+[node name="InteractiveTree" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="Prune" parent="." instance=ExtResource("1_h7ube")]
+position = Vector2(56, 40)
+
+[node name="CutDown" parent="." instance=ExtResource("2_anki8")]
+position = Vector2(128, 40)

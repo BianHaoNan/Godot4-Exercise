@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://pv8xnlqi86g1"]
+[gd_scene load_steps=30 format=3 uid="uid://pv8xnlqi86g1"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/Player_001_Controller.gd" id="1_mqwd1"]
 [ext_resource type="Texture2D" uid="uid://dcvtq2ptsx5fu" path="res://Resources/Animations/Characters/Champions/Gangblanc.png" id="1_xkmfg"]
+[ext_resource type="Script" path="res://Scripts/CameraControl.gd" id="3_b6wdd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cikg6"]
 atlas = ExtResource("1_xkmfg")
@@ -240,3 +241,7 @@ position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_3xqds")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+process_mode = 3
+visible = false
+zoom = Vector2(2, 2)
+script = ExtResource("3_b6wdd")

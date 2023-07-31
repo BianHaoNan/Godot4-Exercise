@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5h671rcj5jxc"]
+
+[ext_resource type="Texture2D" uid="uid://c6vjw07xnhpcl" path="res://Resources/Sprites/User Interface/UiIcons.png" id="1_5a6y8"]
+[ext_resource type="Script" path="res://Scripts/TipsControl.gd" id="1_vbay1"]
+
+[sub_resource type="Animation" id="Animation_cq0ev"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bubble:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_my2ny"]
+resource_name = "TipsDrift"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bubble:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1.5, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_scqkh"]
+_data = {
+"RESET": SubResource("Animation_cq0ev"),
+"TipsDrift": SubResource("Animation_my2ny")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qemrg"]
+border_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="Tips" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vbay1")
+
+[node name="BubbleAnimation" type="AnimationPlayer" parent="."]
+autoplay = "TipsDrift"
+libraries = {
+"": SubResource("AnimationLibrary_scqkh")
+}
+
+[node name="Bubble" type="Sprite2D" parent="."]
+texture = ExtResource("1_5a6y8")
+region_enabled = true
+region_rect = Rect2(16, 160, 16, 16)
+
+[node name="RedPoint" type="Panel" parent="Bubble"]
+self_modulate = Color(1, 0, 0, 1)
+offset_left = 4.0
+offset_top = -8.0
+offset_right = 9.0
+offset_bottom = -3.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qemrg")

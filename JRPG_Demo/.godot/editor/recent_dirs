@@ -1,10 +1,14 @@
+res://Resources/Animations/Characters/Workers/RedWorker
+res://Scripts
+res://Scenes/Decorations
+res://UITheme
+res://Resources/Font
+res://Resources/Tilemaps/Nature
 res://Scripts/Global
 res://Scenes/Aisles
 res://Scripts/Chapters/Chapter_000
-res://Scripts
 res://Resources/Animations/Characters/Champions
 res://Resources/Animations/Characters
-res://UITheme
 res://AudioBuses
 res://Scenes/Menus
 res://Resources/Mutilmedias/Audios/BGM

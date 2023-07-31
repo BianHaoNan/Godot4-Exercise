@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://lejcpgld37nw"]
+[gd_scene load_steps=19 format=3 uid="uid://lejcpgld37nw"]
 
 [ext_resource type="Script" path="res://Scripts/Settings.gd" id="1_8obd1"]
 [ext_resource type="Texture2D" uid="uid://lnv0ygtw3021" path="res://Resources/Sprites/UI/UI_Flat_Slot_02_Available.png" id="2_oljni"]
 [ext_resource type="Texture2D" uid="uid://r5c7fmhffi1c" path="res://Resources/Sprites/UI/UI_Flat_Textfield_01.png" id="3_slxkm"]
 [ext_resource type="Texture2D" uid="uid://dv1hjg7ch6qlh" path="res://Resources/Sprites/UI/UI_Flat_Textfield_02.png" id="4_djfow"]
+[ext_resource type="Theme" uid="uid://dh7g7elwoh4gh" path="res://UITheme/LabelFont.tres" id="5_2wiwg"]
 [ext_resource type="Texture2D" uid="uid://daegnh4puxdnw" path="res://Resources/Sprites/UI/UI_Flat_Button_Small_Release_02a1.png" id="6_md06o"]
 [ext_resource type="Theme" uid="uid://vqtn81xnp3se" path="res://UITheme/SliderTheme.tres" id="7_6plxl"]
 [ext_resource type="Theme" uid="uid://b1ln6pxvua3td" path="res://UITheme/ItemListTheme.tres" id="7_psnr8"]
@@ -64,9 +65,9 @@ offset_left = -7.99999
 offset_top = 24.0
 offset_right = 776.0
 offset_bottom = 88.0
+theme = ExtResource("5_2wiwg")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_krrrm")
 text = "Total Vol"
 vertical_alignment = 1
@@ -88,9 +89,10 @@ offset_left = -7.99999
 offset_top = 240.0
 offset_right = 776.0
 offset_bottom = 304.0
+theme = ExtResource("5_2wiwg")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_krrrm")
 text = "Music"
 vertical_alignment = 1
@@ -112,6 +114,7 @@ offset_left = -7.99999
 offset_top = 480.0
 offset_right = 776.0
 offset_bottom = 544.0
+theme = ExtResource("5_2wiwg")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
@@ -136,6 +139,7 @@ offset_left = -7.99999
 offset_top = 704.0
 offset_right = 776.0
 offset_bottom = 768.0
+theme = ExtResource("5_2wiwg")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
@@ -238,7 +242,7 @@ offset_top = -11.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme = ExtResource("5_2wiwg")
 text = "Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -264,7 +268,9 @@ offset_top = -11.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("5_2wiwg")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
 text = "ScreenSize"
 horizontal_alignment = 1
 vertical_alignment = 1
